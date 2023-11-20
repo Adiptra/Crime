@@ -1,0 +1,588 @@
+@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f3eeea;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  background-color: #776b5d;
+  justify-content: space-between;
+  padding: 1rem 20px;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 80px;
+  /* border-radius: 50%; */
+  margin-right: 10px;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item {
+  margin: 0 8px;
+}
+.nav__item:nth-child(5) a {
+  background-color: #b0a695;
+  padding: 10px 30px;
+}
+.nav__item:nth-child(5) a:hover {
+  background-color: #a89f8e;
+}
+
+.nav__item .active {
+  border-bottom: 2px solid;
+  border-radius: 0;
+}
+
+.nav__link {
+  padding: 10px;
+  color: #eeee;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.nav__link:hover {
+  color: #f3eeea;
+}
+
+.header__toggle,
+.header__close {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 48px;
+    justify-content: space-between;
+    padding: 0 28px;
+  }
+  .logo a {
+    font-size: 0.9rem;
+  }
+  .logo img {
+    width: 30px;
+  }
+  .header__toggle {
+    display: inline;
+    color: #eeee;
+    font-size: 24px;
+  }
+  .header__close {
+    position: absolute;
+    right: 24px;
+    display: block;
+    font-size: 24px;
+    border-radius: 50%;
+  }
+  .header__close:hover {
+    background-color: #b0a695;
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #776b5d;
+    color: #eeee;
+    width: 60%;
+    height: 100vh;
+    padding: 24px 0;
+    z-index: 100;
+    transition: 0.5s;
+    border-radius: 0 0 0 50%;
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav__item {
+    margin: 2rem 0;
+  }
+}
+
+/* End Navbar */
+
+/* Modal */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  height: 60%;
+  position: relative;
+  border-radius: 20px;
+}
+.modal-content1 {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  height: 85%;
+  position: relative;
+  border-radius: 20px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close1 {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.close1:hover,
+.close1:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content .form h1 {
+  text-align: center;
+}
+.modal-content .form form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.modal-content .form form .wrapperForm {
+  width: 70%;
+}
+.modal-content .form form .wrapperForm div label {
+  display: block;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.modal-content .form form .wrapperForm div input {
+  width: 100%;
+  height: 35px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 20px 10px;
+  border: 1px solid #020202;
+}
+.modal-content .form form .wrapperForm .btn {
+  width: 100%;
+  margin-top: 30px;
+}
+.modal-content .form form .wrapperForm .btn a {
+  background-color: #5383ff;
+  display: block;
+  padding: 10px;
+  color: #f3eeea;
+  text-align: center;
+  border-radius: 10px;
+}
+.modal-content .form form .wrapperForm .btn p a {
+  background: none;
+  color: #5383ff;
+  padding: 0;
+  display: inline;
+}
+.modal-content1 .form h1 {
+  text-align: center;
+}
+.modal-content1 .form form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.modal-content1 .form form .wrapperForm {
+  width: 70%;
+}
+.modal-content1 .form form .wrapperForm div label {
+  display: block;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.modal-content1 .form form .wrapperForm div input {
+  width: 100%;
+  height: 35px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 20px 10px;
+  border: 1px solid #020202;
+}
+.modal-content1 .form form .wrapperForm .btn {
+  width: 100%;
+  margin-top: 30px;
+}
+.modal-content1 .form form .wrapperForm .btn a {
+  background-color: #5383ff;
+  display: block;
+  padding: 10px;
+  color: #f3eeea;
+  text-align: center;
+  border-radius: 10px;
+}
+.modal-content1 .form form .wrapperForm .btn p a {
+  background: none;
+  color: #5383ff;
+  padding: 0;
+  display: inline;
+}
+/* End Modal */
+
+/* Beranda */
+
+#Beranda {
+  position: relative;
+}
+
+.bg {
+  position: relative;
+}
+
+.bg .black {
+  width: 100%;
+  height: 67vh;
+  background-color: #020202;
+  opacity: 50%;
+  top: 0;
+  position: absolute;
+}
+
+.bg img {
+  width: 100%;
+  height: 100%;
+}
+
+.aduan {
+  /* background-color: #aa1006; */
+  width: 100%;
+  height: 70vh;
+  padding: 30px 150px;
+}
+
+.aduan h2 {
+  text-align: center;
+  font-weight: 450;
+}
+
+.aduan h1 {
+  width: 100%;
+  font-weight: 800;
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.aduan .btn {
+  width: 100%;
+  /* background-color: #776b5d; */
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.aduan .btn a {
+  color: #ffffffe5;
+  font-size: 20px;
+  background-color: #aa1006;
+  padding: 15px 28px;
+  border-radius: 20px;
+}
+.aduan .btn a:hover {
+  background-color: #ce1104;
+}
+
+.aduan .search {
+  /* background-color: #776b5d; */
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.aduan .search input {
+  padding: 15px;
+  font-size: 20px;
+  border: none;
+  border-radius: 50px;
+}
+/*  End Beranda */
+
+/* About */
+#About {
+  width: 100%;
+  height: 64vh;
+  background-color: #fff;
+}
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 50px;
+  justify-content: space-around;
+}
+.wrapper .left {
+  background-color: #776b5d;
+  width: 30%;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  color: #f3eeea;
+}
+
+.wrapper .left h1 {
+  margin: 10px 0;
+}
+.wrapper .left p {
+  text-align: left;
+  margin-top: 20px;
+}
+.wrapper .left .btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.wrapper .left .btn a {
+  color: #776b5d;
+  background-color: #f3eeea;
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.wrapper .left .btn a:hover {
+  background-color: #faf8f7;
+}
+
+.wrapper .right-img {
+  width: 50%;
+  background-image: url("../images/maling.png");
+  border-radius: 20px;
+}
+
+/* Tersangka */
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#Tersangka {
+  height: 600px;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 500px 100px;
+  grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+main#carousel {
+  grid-row: 1 / 2;
+  grid-column: 1 / 8;
+  width: 100vw;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  --items: 5;
+  --middle: 3;
+  --position: 1;
+  pointer-events: none;
+}
+
+div.item {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  padding: 20px;
+  background-color: #776b5d;
+  border: 1px solid #000;
+  --r: calc(var(--position) - var(--offset));
+  --abs: max(calc(var(--r) * -1), var(--r));
+  transition: all 0.25s linear;
+  transform: rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-300px * var(--r)));
+  z-index: calc((var(--position) - var(--abs)));
+}
+
+div.item .image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+div.item img {
+  width: 60%;
+  border-radius: 10px;
+}
+div.item .content .namaTersangka {
+  margin-top: 20px;
+}
+
+div.item:nth-of-type(1) {
+  --offset: 1;
+  border-radius: 10px;
+}
+
+div.item:nth-of-type(2) {
+  --offset: 2;
+  border-radius: 10px;
+}
+div.item:nth-of-type(3) {
+  --offset: 3;
+  border-radius: 10px;
+}
+div.item:nth-of-type(4) {
+  --offset: 4;
+  border-radius: 10px;
+}
+div.item:nth-of-type(5) {
+  --offset: 5;
+  border-radius: 10px;
+}
+
+input:nth-of-type(1) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(1):checked ~ main#carousel {
+  --position: 1;
+}
+
+input:nth-of-type(2) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(2):checked ~ main#carousel {
+  --position: 2;
+}
+
+input:nth-of-type(3) {
+  grid-column: 4 /5;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(3):checked ~ main#carousel {
+  --position: 3;
+}
+
+input:nth-of-type(4) {
+  grid-column: 5 / 6;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(4):checked ~ main#carousel {
+  --position: 4;
+}
+
+input:nth-of-type(5) {
+  grid-column: 6 / 7;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(5):checked ~ main#carousel {
+  --position: 5;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: #fff;
+  height: 50vh;
+}
+.footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+.footer .left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .left img {
+  width: 50%;
+  height: 40%;
+}
+.footer .right {
+  width: 50%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.footer .right div h3 {
+  font-size: 25px;
+}
+.cp {
+  width: 100%;
+  background-color: #776b5d;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.cp h3 {
+  font-size: 22px;
+  color: #f3eeea;
+  font-weight: 400;
+}

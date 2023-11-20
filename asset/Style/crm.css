@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f3eeea;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  background-color: #776b5d;
+  justify-content: space-between;
+  padding: 1rem 20px;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 80px;
+  /* border-radius: 50%; */
+  margin-right: 10px;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item {
+  margin: 0 8px;
+}
+.nav__item:nth-child(5) a {
+  background-color: #b0a695;
+  padding: 10px 30px;
+}
+.nav__item:nth-child(5) a:hover {
+  background-color: #a89f8e;
+}
+
+.nav__item .active {
+  border-bottom: 2px solid;
+  border-radius: 0;
+}
+
+.nav__link {
+  padding: 10px;
+  color: #eeee;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.nav__link:hover {
+  color: #f3eeea;
+}
+
+.header__toggle,
+.header__close {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 48px;
+    justify-content: space-between;
+    padding: 0 28px;
+  }
+  .logo a {
+    font-size: 0.9rem;
+  }
+  .logo img {
+    width: 30px;
+  }
+  .header__toggle {
+    display: inline;
+    color: #eeee;
+    font-size: 24px;
+  }
+  .header__close {
+    position: absolute;
+    right: 24px;
+    display: block;
+    font-size: 24px;
+    border-radius: 50%;
+  }
+  .header__close:hover {
+    background-color: #b0a695;
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #776b5d;
+    color: #eeee;
+    width: 60%;
+    height: 100vh;
+    padding: 24px 0;
+    z-index: 100;
+    transition: 0.5s;
+    border-radius: 0 0 0 50%;
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav__item {
+    margin: 2rem 0;
+  }
+}
+
+/* End Navbar */
+
+/* Modal */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  height: 60%;
+  position: relative;
+  border-radius: 20px;
+}
+.modal-content1 {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  height: 85%;
+  position: relative;
+  border-radius: 20px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close1 {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.close1:hover,
+.close1:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content .form h1 {
+  text-align: center;
+}
+.modal-content .form form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.modal-content .form form .wrapperForm {
+  width: 70%;
+}
+.modal-content .form form .wrapperForm div label {
+  display: block;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.modal-content .form form .wrapperForm div input {
+  width: 100%;
+  height: 35px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 20px 10px;
+  border: 1px solid #020202;
+}
+.modal-content .form form .wrapperForm .btn {
+  width: 100%;
+  margin-top: 30px;
+}
+.modal-content .form form .wrapperForm .btn a {
+  background-color: #5383ff;
+  display: block;
+  padding: 10px;
+  color: #f3eeea;
+  text-align: center;
+  border-radius: 10px;
+}
+.modal-content .form form .wrapperForm .btn p a {
+  background: none;
+  color: #5383ff;
+  padding: 0;
+  display: inline;
+}
+.modal-content1 .form h1 {
+  text-align: center;
+}
+.modal-content1 .form form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.modal-content1 .form form .wrapperForm {
+  width: 70%;
+}
+.modal-content1 .form form .wrapperForm div label {
+  display: block;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.modal-content1 .form form .wrapperForm div input {
+  width: 100%;
+  height: 35px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 20px 10px;
+  border: 1px solid #020202;
+}
+.modal-content1 .form form .wrapperForm .btn {
+  width: 100%;
+  margin-top: 30px;
+}
+.modal-content1 .form form .wrapperForm .btn a {
+  background-color: #5383ff;
+  display: block;
+  padding: 10px;
+  color: #f3eeea;
+  text-align: center;
+  border-radius: 10px;
+}
+.modal-content1 .form form .wrapperForm .btn p a {
+  background: none;
+  color: #5383ff;
+  padding: 0;
+  display: inline;
+}
+/* End Modal */
+
+/* Lapor */
+#Laporkan {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+.title {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.title h1 {
+  font-size: 40px;
+}
+form {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.wrapper {
+  width: 30%;
+  height: 100%;
+  position: relative;
+}
+form .wrapper div label {
+  display: block;
+  font-size: 20px;
+  margin-top: 20px;
+}
+form .wrapper div input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 30px;
+  padding: 20px;
+  font-size: 20px;
+  background-color: #d9d9d9;
+}
+form .wrapper div input[type="file"] {
+  height: 70px;
+}
+form .wrapper .btn {
+  background-color: #131212;
+  border-radius: 10px;
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+}
+form .wrapper .btn a {
+  padding: 5px 30px;
+  color: #f3eeea;
+}
+/* End Lapor */
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: #f3eeea;
+  height: 50vh;
+}
+.footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+.footer .left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .left img {
+  width: 50%;
+  height: 40%;
+}
+.footer .right {
+  width: 50%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.footer .right div h3 {
+  font-size: 25px;
+}
+.cp {
+  width: 100%;
+  background-color: #776b5d;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.cp h3 {
+  font-size: 22px;
+  color: #f3eeea;
+  font-weight: 400;
+}
